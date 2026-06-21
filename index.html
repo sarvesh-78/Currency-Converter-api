@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convertor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="./images/numbers.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h1 class="curHeading">Currency Exchange</h1>
+    <div class="container">
+        <form>
+            <div class="curConvertor">
+
+                <div class="amount">
+                    <p>Enter the amount:</p>
+                    <input value="1" type="text" />
+                </div>
+                <div class="dropdown">
+                    <div class="from">
+                        <p>From</p>
+                        <div class="select-container">
+                            <img src="https://flagsapi.com/US/flat/64.png" alt="">
+                            <select name="from">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="svg-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="55" fill="currentColor"
+                            class="bi bi-arrow-left-right" viewBox="-1 -8 24 24">
+                            <path fill-rule="evenodd"
+                                d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                        </svg>
+                    </div>
+                    <div class="to">
+                        <p>To</p>
+                        <div class="select-container">
+                            <img src="https://flagsapi.com/IN/flat/64.png" alt="">
+                            <select name="to">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="msg"></div>
+                    <button class="convert">Get Currency Rate</button>
+                </div>
+        </form>
+    </div>
+    </div>
+    <script src="./codes.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

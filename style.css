@@ -1,0 +1,179 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; /* Ensure padding and borders are included in element sizes */
+}
+
+body {
+    font-family: "Libre Baskerville", serif;
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Heading */
+.curHeading {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    background-color: rgba(1, 1, 117, 0.9); /* Slight transparency */
+    padding: 10px;
+    font-family: "Libre Baskerville";
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack content vertically for small screens */
+    min-height: 60vh;
+    width: 90%; /* Allow space on smaller screens */
+    max-width: 500px; /* Limit for larger screens */
+    margin: 0 auto;
+    background-color: white;
+    border: 3px rgb(1, 1, 117) solid;
+    border-radius: 10px;
+    padding: 20px; /* Added padding for spacing */
+}
+
+/* Amount Input */
+.amount p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.amount input {
+    width: 100%; /* Full width for smaller screens */
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+/* Dropdown Section */
+.dropdown {
+    display: flex;
+    justify-content: space-between; /* Align items to left and right */
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select-container img {
+    width: 48px; /* Smaller icons for mobile */
+    height: 48px;
+    object-fit: contain;
+}
+
+.dropdown select {
+    width: auto; 
+    height: 35px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+/* SVG Arrow */
+.svg-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Result Section */
+.result {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result .convert {
+    display: inline-block;
+    margin: 10px auto;
+}
+
+/* Button */
+.convert {
+    width: 100%; /* Full width for better usability on smaller screens */
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    color: white;
+    background-color: rgb(1, 1, 117);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.convert:hover {
+    background-color: rgb(74, 74, 251); 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .curHeading {
+        font-size: 24px; /* Smaller font for headings */
+        margin-bottom: 30px;
+    }
+
+    .dropdown {
+        flex-direction: column; /* Stack dropdowns vertically */
+        align-items: stretch; /* Align items to full width */
+    }
+
+    .select-container img {
+        width: 40px; /* Adjust flag size */
+        height: 40px;
+    }
+
+    .dropdown select {
+        width: 100%; /* Dropdown spans full width */
+    }
+
+    .convert {
+        font-size: 14px; /* Smaller button font */
+    }
+}
+
+@media (max-width: 480px) {
+    .curHeading {
+        font-size: 18px; /* Further reduction for small screens */
+        padding: 5px;
+    }
+
+    .container {
+        padding: 15px; /* Compact container padding */
+    }
+
+    .amount p {
+        font-size: 16px;
+    }
+
+    .amount input {
+        height: 35px; /* Reduce input height */
+    }
+
+    .dropdown select {
+        height: 30px; /* Reduce dropdown height */
+        font-size: 14px; /* Smaller font */
+    }
+
+    .convert {
+        height: 35px; /* Smaller button size */
+    }
+}
